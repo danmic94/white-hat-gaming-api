@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('game_brand_block', function (Blueprint $table) {
-            $table->unique('launchcode');
+            $table->string('launchcode');
             $table->unsignedInteger('brandid');
             $table->timestamps();
         });

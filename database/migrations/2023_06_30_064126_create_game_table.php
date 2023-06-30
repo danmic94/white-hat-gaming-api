@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('game', function (Blueprint $table) {
             $table->unsignedInteger('game_provider_id');
             $table->string('name');
-            $table->unique('launchcode');
+            $table->string('launchcode');
             $table->unsignedFloat('rtp');
             $table->timestamps();
         });

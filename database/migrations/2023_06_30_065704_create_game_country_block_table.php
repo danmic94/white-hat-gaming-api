@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('game_country_block', function (Blueprint $table) {
-            $table->unique('launchcode');
-            $table->unique('brandid');
+            $table->string('launchcode');
+            $table->unsignedInteger('brandid');
             $table->string('country');
             $table->timestamps();
         });
