@@ -13,6 +13,13 @@
 |
 */
 
+$router->get('/api/health', function () use ($router) {
+    return response([
+        'version' => $router->app->version(),
+        'status' => 'pass',
+    ], 200);
+});
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });

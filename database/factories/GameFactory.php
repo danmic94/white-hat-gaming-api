@@ -15,7 +15,7 @@ class GameFactory extends Factory
     {
         return [
             "launchcode" => $this->faker->uuid(),
-            "name" => 'Test',
+            "name" => $this->faker->colorName(), // ran out of ideas and using color names
             'rtp' => $this->faker->randomFloat(2, 20, 30)
         ];
     }

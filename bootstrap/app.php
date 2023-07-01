@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CorsMiddleware;
 use PhpParser\Lexer\TokenEmulator\FlexibleDocStringEmulator;
 
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -73,9 +74,7 @@ $app->configure('app');
 |
 */
 
-// $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([App\Http\Middleware\CorsMiddleware::class]);
 
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
